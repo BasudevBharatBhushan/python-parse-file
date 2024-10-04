@@ -24,8 +24,11 @@ def extract_text_from_pdf(file):
         text += page.extract_text()
     return text
 
+@app.get("/")
+async def read_root():
+    return "File Parser is working!"
+
 @app.post("/parse-file")
-@app.post("/parse-file/")
 async def parse_file(request: Request):
     logging.debug(f"Received request: {request.method} {request.url}")
     logging.debug(f"Headers: {request.headers}")
