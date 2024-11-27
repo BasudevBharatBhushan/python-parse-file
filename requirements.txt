@@ -4,3 +4,5 @@ pandas
 openpyxl
 pypdf2
 python-multipart
+requests
+python-dotenv
